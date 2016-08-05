@@ -1,0 +1,7 @@
+user_details:
+  actAs: { Timestampable: ~ }
+  columns:
+    user_name:         { type: string(255) }
+    user_password:      { type: string(255), notnull: true }
+    is_activated: { type: boolean, notnull: true, default: 0 }
+    user_email:        { type: string(255), notnull: true }
