@@ -12,9 +12,10 @@ class userActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
+    print_r($this->getRequest()->getUri()); 
     $this->user_detailss = Doctrine_Core::getTable('user_details')
-      ->createQuery('a')
-      ->execute();
+    ->createQuery('a')
+    ->execute();
   }
 
   public function executeShow(sfWebRequest $request)
